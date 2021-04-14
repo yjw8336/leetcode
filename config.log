@@ -1,0 +1,15 @@
+
+$!velocityTool.camelCaseName(${question.titleSlug})
+
+${question.content}
+/**
+* [${question.frontendQuestionId}]${question.title}
+*/
+class $!velocityTool.camelCaseName(${question.titleSlug}) {
+        ${question.code}
+
+    public static void main(String[] args) {
+        Solution solution = new $!velocityTool.camelCaseName(${question.titleSlug})().new Solution();
+    }
+
+}
