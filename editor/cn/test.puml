@@ -1,0 +1,45 @@
+@startuml
+
+enum EncodeType {
+JSON
+PROTOBUF
+}
+enum EncodeVersion{
+V1=1001
+V2
+V3
+V4
+}
+interface ISerializeHelper {
+   {static} byte[] : -serialize(Message obj)
+   {static} Message : -deserialize(byte[] message)
+}
+interface IMessage {
+EncodeVersion: encodeVersion
+EncodeType encodeType
+}
+class RequestMessage {
+
+}
+
+IMessage <|-- RequestMessage
+
+class ResponseMessage {
+
+}
+
+IMessage <|-- ResponseMessage
+
+
+'abstract        abstract
+'abstract class  "abstract class"
+'annotation      annotation
+'circle          circle
+'()              circle_short_form
+'class           class
+'diamond         diamond
+'<>              diamond_short_form
+'entity          entity
+'enum            enum
+'interface       interface
+@enduml
